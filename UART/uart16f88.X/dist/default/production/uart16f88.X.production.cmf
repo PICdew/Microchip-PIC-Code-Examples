@@ -1,0 +1,240 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$/tmp/cgtjF4rN0.obj
+end_init CODE 0 11 11 2 2
+reset_vec CODE 0 0 0 2 2
+config CONFIG 0 2007 2007 2 2
+$dist/default/production/uart16f88.X.production.obj
+cinit CODE 0 13 13 3 2
+intentry CODE 0 4 4 D 2
+text1 CODE 0 33 33 14 2
+maintext CODE 0 16 16 1D 2
+cstackCOMMON COMMON 1 70 70 4 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 0020-006F 1
+BANK1 00A0-00EF 1
+BANK2 0110-016F 1
+BANK3 0190-01EF 1
+CODE 0002-0003 2
+CODE 0047-0FFF 2
+COMMON 0074-007D 1
+CONST 0002-0003 2
+CONST 0047-0FFF 2
+EEDATA 2100-21FF 2
+ENTRY 0002-0003 2
+ENTRY 0047-0FFF 2
+IDLOC 2000-2003 2
+RAM 0020-006F 1
+RAM 00A0-00EF 1
+RAM 0110-016F 1
+RAM 0190-01EF 1
+SFR0 0000-001F 1
+SFR1 0080-009F 1
+SFR2 0100-010F 1
+SFR3 0180-018F 1
+STRCODE 0002-0003 2
+STRCODE 0047-0FFF 2
+STRING 0002-0003 2
+STRING 0047-0FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production/uart16f88.X.production.obj
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":22 4 intentry CODE
+"/tmp/cgtu7lf7K":222 13 cinit CODE
+"/tmp/cgtu7lf7K":223 14 cinit CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":43 16 maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":44 1A maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":48 1B maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":49 1C maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":50 1D maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":51 1E maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":54 1F maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":55 23 maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":58 24 maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":61 25 maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":64 29 maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":65 2A maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":66 2B maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":67 2C maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":70 2D maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":71 30 maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":72 31 maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":79 32 maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":25 33 text1 CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":85 33 maintext CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":27 35 text1 CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":28 37 text1 CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":32 3A text1 CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":33 3B text1 CODE
+"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":39 3C text1 CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__CFG_WRT$OFF 0 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+__S0 2009 0 ABS 0 - -
+__S1 74 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+_ISR 66 0 CODE 0 text1 dist/default/production/uart16f88.X.production.obj
+__Hintentry 22 0 CODE 0 intentry -
+__Lintentry 8 0 CODE 0 intentry -
+__CFG_BOREN$ON 0 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+__pintentry 8 0 CODE 0 intentry dist/default/production/uart16f88.X.production.obj
+_OERR C1 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+_main 2C 0 CODE 0 maintext dist/default/production/uart16f88.X.production.obj
+btemp 7E 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+start 22 0 CODE 0 init /tmp/cgtjF4rN0.obj
+_RCREG 1A 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+_TXREG 19 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/cgtjF4rN0.obj
+_SPBRG 99 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+wtemp0 7E 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+interrupt_function 8 0 CODE 0 intentry dist/default/production/uart16f88.X.production.obj
+__Hconfig 4012 0 CONFIG 0 config -
+__Lconfig 400E 0 CONFIG 0 config -
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__end_of_ISR 8E 0 CODE 0 text1 dist/default/production/uart16f88.X.production.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Lfunctab 0 0 CODE 0 functab -
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+_PIE1bits 8C 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+_PIR1bits C 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+_OSCCON 8F 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+_INTCON B 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+saved_w 7E 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+__Hinit 22 0 CODE 0 init -
+__Linit 22 0 CODE 0 init -
+__end_of_main 66 0 CODE 0 maintext dist/default/production/uart16f88.X.production.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+end_of_initialization 26 0 CODE 0 cinit dist/default/production/uart16f88.X.production.obj
+__size_of_ISR 0 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+_TRISAbits 85 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+_RCSTAbits 18 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+_TXSTAbits 98 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Lbank3 0 0 ABS 0 bank3 -
+___latbits 1 0 ABS 0 - /tmp/cgtjF4rN0.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__Lpowerup 0 0 CODE 0 powerup -
+__ptext0 0 0 CODE 0 text0 dist/default/production/uart16f88.X.production.obj
+__ptext1 66 0 CODE 0 text1 dist/default/production/uart16f88.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+__end_of__initialization 26 0 CODE 0 cinit dist/default/production/uart16f88.X.production.obj
+_CCP1CONbits 17 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+__CFG_IESO$ON 0 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+__Hcinit 2C 0 CODE 0 cinit -
+__Lcinit 26 0 CODE 0 cinit -
+__size_of_main 0 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+__CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+_INTCONbits B 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+_SSPCONbits 14 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+__Hend_init 26 0 CODE 0 end_init -
+__Lend_init 22 0 CODE 0 end_init -
+__Hreset_vec 4 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+intlevel0 0 0 CODE 0 functab /tmp/cgtjF4rN0.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+intlevel1 0 0 CODE 0 functab /tmp/cgtjF4rN0.obj
+intlevel2 0 0 CODE 0 functab /tmp/cgtjF4rN0.obj
+intlevel3 0 0 CODE 0 functab /tmp/cgtjF4rN0.obj
+intlevel4 0 0 CODE 0 functab /tmp/cgtjF4rN0.obj
+intlevel5 0 0 CODE 0 functab /tmp/cgtjF4rN0.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production/uart16f88.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+start_initialization 26 0 CODE 0 cinit dist/default/production/uart16f88.X.production.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext 2C 0 CODE 0 maintext dist/default/production/uart16f88.X.production.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+__initialization 26 0 CODE 0 cinit dist/default/production/uart16f88.X.production.obj
+__CFG_FOSC$INTOSCCLK 0 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+__CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+__CFG_CCPMX$RB0 0 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta> <class name>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 2 2 CODE
+intentry 0 4 8 43 2 CODE
+config 0 2007 400E 2 2 CONFIG
+cstackCOMMON 1 70 70 4 1 COMMON

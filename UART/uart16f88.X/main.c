@@ -24,11 +24,17 @@ void interrupt ISR()
     // UART RX byte
     if(PIR1bits.RCIF)
     {
+        PIR1bits.RCIF=0;
+
         if(!OERR) // no overrun
-            TXREG=RCREG;
-        else
         {
-            //
+            // TX
+            while(!TXSTAbits.TRMT);    // make sure buffer full bit is high before transmitting
+            TXREG=RCREG;
+        }
+            
+        else //in case of overrun
+        {
           RCSTAbits.CREN=0;
           RCSTAbits.CREN=1;
         }
@@ -74,7 +80,7 @@ void main(void) {
 
     //GPIO SETUP
 //    TRISBbits.TRISB2=1;
-  //  TRISBbits.TRISB5=0;
+//  TRISBbits.TRISB5=0;
 
    while(1)
     {

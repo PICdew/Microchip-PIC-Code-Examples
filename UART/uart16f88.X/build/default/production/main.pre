@@ -1295,11 +1295,17 @@ void interrupt ISR()
 
 if(PIR1bits.RCIF)
 {
+PIR1bits.RCIF=0;
+
 if(!OERR)
-TXREG=RCREG;
-else
 {
 
+while(!TXSTAbits.TRMT);
+TXREG=RCREG;
+}
+
+else
+{
 RCSTAbits.CREN=0;
 RCSTAbits.CREN=1;
 }
@@ -1342,7 +1348,7 @@ RCSTAbits.RX9=0;
 RCSTAbits.CREN=1;
 RCSTAbits.ADDEN=0;
 
-# 79
+# 85
 while(1)
 {
 

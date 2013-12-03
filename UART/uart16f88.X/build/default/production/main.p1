@@ -9,6 +9,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _PIR1bits `VS15 ~T0 @X0 0 e@12 ]
 "2226
 [v _OERR `Vb ~T0 @X0 0 e@193 ]
+"1608
+[s S70 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S70 . TX9D TRMT BRGH . SYNC TXEN TX9 CSRC ]
+"1618
+[s S71 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S71 . TXD8 . nTX8 ]
+"1623
+[s S72 :6 `uc 1 :1 `uc 1 ]
+[n S72 . . TX8_9 ]
+"1607
+[u S69 `S70 1 `S71 1 `S72 1 ]
+[n S69 . . . . ]
+"1628
+[v _TXSTAbits `VS69 ~T0 @X0 0 e@152 ]
 "870
 [v _TXREG `Vuc ~T0 @X0 0 e@25 ]
 "876
@@ -86,20 +100,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _SSPCONbits `VS25 ~T0 @X0 0 e@20 ]
 "1682
 [v _SPBRG `Vuc ~T0 @X0 0 e@153 ]
-"1608
-[s S70 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S70 . TX9D TRMT BRGH . SYNC TXEN TX9 CSRC ]
-"1618
-[s S71 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
-[n S71 . TXD8 . nTX8 ]
-"1623
-[s S72 :6 `uc 1 :1 `uc 1 ]
-[n S72 . . TX8_9 ]
-"1607
-[u S69 `S70 1 `S71 1 `S72 1 ]
-[n S69 . . . . ]
-"1628
-[v _TXSTAbits `VS69 ~T0 @X0 0 e@152 ]
 [; ;pic16f88.h: 44: extern volatile unsigned char INDF @ 0x000;
 "46 /home/frico/microchip/xc8/v1.21/include/pic16f88.h
 [; ;pic16f88.h: 46: asm("INDF equ 00h");
@@ -1048,108 +1048,124 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 26: {
 "26
 {
-[; ;main.c: 27: if(!OERR)
+[; ;main.c: 27: PIR1bits.RCIF=0;
 "27
-[e $ ! ! _OERR 91  ]
-[; ;main.c: 28: TXREG=RCREG;
-"28
-[e = _TXREG _RCREG ]
-[e $U 92  ]
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 29: if(!OERR)
 "29
-[e :U 91 ]
-[; ;main.c: 29: else
+[e $ ! ! _OERR 91  ]
 [; ;main.c: 30: {
 "30
 {
-[; ;main.c: 32: RCSTAbits.CREN=0;
+[; ;main.c: 32: while(!TXSTAbits.TRMT);
 "32
-[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 33: RCSTAbits.CREN=1;
+[e $U 92  ]
+[e :U 93 ]
+[e :U 92 ]
+[e $ ! != -> . . _TXSTAbits 0 1 `i -> -> -> 0 `i `Vuc `i 93  ]
+[e :U 94 ]
+[; ;main.c: 33: TXREG=RCREG;
 "33
-[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+[e = _TXREG _RCREG ]
 "34
 }
-[e :U 92 ]
-"35
+[; ;main.c: 34: }
+[e $U 95  ]
+"36
+[e :U 91 ]
+[; ;main.c: 36: else
+[; ;main.c: 37: {
+"37
+{
+[; ;main.c: 38: RCSTAbits.CREN=0;
+"38
+[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 39: RCSTAbits.CREN=1;
+"39
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+"40
+}
+[e :U 95 ]
+"41
 }
 [e :U 90 ]
-[; ;main.c: 34: }
-[; ;main.c: 35: }
-[; ;main.c: 39: }
-"39
+[; ;main.c: 40: }
+[; ;main.c: 41: }
+[; ;main.c: 45: }
+"45
 [e :UE 89 ]
 }
-"40
+"46
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 40: void main(void) {
+[; ;main.c: 46: void main(void) {
 [e :U _main ]
 [f ]
-[; ;main.c: 43: OSCCON=0b01111100;
-"43
-[e = _OSCCON -> -> 124 `i `uc ]
-[; ;main.c: 44: TRISAbits.TRISA6=0;
-"44
-[e = . . _TRISAbits 0 6 -> -> 0 `i `uc ]
-[; ;main.c: 48: INTCON=0;
-"48
-[e = _INTCON -> -> 0 `i `uc ]
-[; ;main.c: 49: INTCONbits.GIE=1;
+[; ;main.c: 49: OSCCON=0b01111100;
 "49
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-[; ;main.c: 50: INTCONbits.PEIE=1;
+[e = _OSCCON -> -> 124 `i `uc ]
+[; ;main.c: 50: TRISAbits.TRISA6=0;
 "50
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-[; ;main.c: 51: PIE1bits.RCIE=1;
-"51
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
-[; ;main.c: 54: CCP1CONbits.CCP1M=0;
+[e = . . _TRISAbits 0 6 -> -> 0 `i `uc ]
+[; ;main.c: 54: INTCON=0;
 "54
-[e = . . _CCP1CONbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 55: SSPCONbits.SSPEN=0;
+[e = _INTCON -> -> 0 `i `uc ]
+[; ;main.c: 55: INTCONbits.GIE=1;
 "55
-[e = . . _SSPCONbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 58: RCSTAbits.SPEN=1;
-"58
-[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
-[; ;main.c: 61: SPBRG=51;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+[; ;main.c: 56: INTCONbits.PEIE=1;
+"56
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[; ;main.c: 57: PIE1bits.RCIE=1;
+"57
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+[; ;main.c: 60: CCP1CONbits.CCP1M=0;
+"60
+[e = . . _CCP1CONbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 61: SSPCONbits.SSPEN=0;
 "61
-[e = _SPBRG -> -> 51 `i `uc ]
-[; ;main.c: 64: TXSTAbits.TX9=0;
+[e = . . _SSPCONbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 64: RCSTAbits.SPEN=1;
 "64
-[e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
-[; ;main.c: 65: TXSTAbits.TXEN=1;
-"65
-[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
-[; ;main.c: 66: TXSTAbits.SYNC=0;
-"66
-[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 67: TXSTAbits.BRGH=1;
+[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
+[; ;main.c: 67: SPBRG=51;
 "67
-[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 70: RCSTAbits.RX9=0;
+[e = _SPBRG -> -> 51 `i `uc ]
+[; ;main.c: 70: TXSTAbits.TX9=0;
 "70
-[e = . . _RCSTAbits 0 6 -> -> 0 `i `uc ]
-[; ;main.c: 71: RCSTAbits.CREN=1;
+[e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
+[; ;main.c: 71: TXSTAbits.TXEN=1;
 "71
-[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
-[; ;main.c: 72: RCSTAbits.ADDEN=0;
+[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
+[; ;main.c: 72: TXSTAbits.SYNC=0;
 "72
+[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 73: TXSTAbits.BRGH=1;
+"73
+[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 76: RCSTAbits.RX9=0;
+"76
+[e = . . _RCSTAbits 0 6 -> -> 0 `i `uc ]
+[; ;main.c: 77: RCSTAbits.CREN=1;
+"77
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+[; ;main.c: 78: RCSTAbits.ADDEN=0;
+"78
 [e = . . _RCSTAbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 79: while(1)
-"79
-[e :U 95 ]
-[; ;main.c: 80: {
-"80
-{
-"82
-}
-[e :U 94 ]
-"79
-[e $U 95  ]
-[e :U 96 ]
-[; ;main.c: 82: }
-[; ;main.c: 85: }
+[; ;main.c: 85: while(1)
 "85
-[e :UE 93 ]
+[e :U 98 ]
+[; ;main.c: 86: {
+"86
+{
+"88
+}
+[e :U 97 ]
+"85
+[e $U 98  ]
+[e :U 99 ]
+[; ;main.c: 88: }
+[; ;main.c: 91: }
+"91
+[e :UE 96 ]
 }

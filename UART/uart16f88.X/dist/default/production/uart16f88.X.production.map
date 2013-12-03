@@ -5,7 +5,7 @@ Linker command line:
 --edf=/home/frico/microchip/xc8/v1.21/dat/en_msgs.txt -cs \
   -h+dist/default/production/uart16f88.X.production.sym \
   --cmf=dist/default/production/uart16f88.X.production.cmf -z -Q16F88 \
-  -o/tmp/cgthIxCMP -Mdist/default/production/uart16f88.X.production.map -E1 \
+  -o/tmp/cgtWUzPEO -Mdist/default/production/uart16f88.X.production.map -E1 \
   -ver=XC8 -ACONST=00h-0FFhx16 -ACODE=00h-07FFhx2 -ASTRCODE=00h-0FFFh \
   -AENTRY=00h-0FFhx16 -ASTRING=00h-0FFhx16 -ACOMMON=070h-07Fh \
   -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0110h-016Fh \
@@ -16,7 +16,7 @@ Linker command line:
   -pfunctab=CODE -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k /tmp/cgtjF4rN0.obj \
+  -DENTRY=2 -k /tmp/cgtj3nVHv.obj \
   dist/default/production/uart16f88.X.production.obj 
 
 Object code version is 3.11
@@ -26,14 +26,14 @@ Machine type is 16F88
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/cgtjF4rN0.obj
+/tmp/cgtj3nVHv.obj
                 end_init                             11       11        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             2007     2007        2     400E       0
 dist/default/production/uart16f88.X.production.obj
                 cinit                                13       13        3        8       0
                 intentry                              4        4        D        8       0
-                text1                                33       33       14        8       0
+                text1                                33       33       1B        8       0
                 maintext                             16       16       1D        8       0
                 cstackCOMMON                         70       70        4       70       1
 
@@ -45,7 +45,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cinit                                13       13        3         0
                 intentry                              4        4        D         0
                 reset_vec                             0        0        2         0
-                text1                                33       33       14         0
+                text1                                33       33       1B         0
                 maintext                             16       16       1D         0
 
         CLASS   STRCODE        
@@ -90,7 +90,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000002  000002         0       0  CODE        2
-                intentry                       000004  000043  000047         8       0  CODE        2
+                intentry                       000004  00004A  00004E         8       0  CODE        2
                 cstackCOMMON                   000070  000004  000074        70       1  COMMON      1
                 config                         002007  000002  002009      400E       0  CONFIG      2
 
@@ -103,13 +103,13 @@ UNUSED ADDRESS RANGES
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
         CODE             0002-0003              2           2
-                         0047-0FFF            7B9
+                         004E-0FFF            7B2
         COMMON           0074-007D              A           1
         CONST            0002-0003              2           2
-                         0047-0FFF            100
+                         004E-0FFF            100
         EEDATA           2100-21FF            100           2
         ENTRY            0002-0003              2           2
-                         0047-0FFF            100
+                         004E-0FFF            100
         IDLOC            2000-2003              4           2
         RAM              0020-006F             50           1
                          00A0-00EF             50
@@ -120,9 +120,9 @@ UNUSED ADDRESS RANGES
         SFR2             0100-010F             10           1
         SFR3             0180-018F             10           1
         STRCODE          0002-0003              2           2
-                         0047-0FFF            FB9
+                         004E-0FFF            FB2
         STRING           0002-0003              2           2
-                         0047-0FFF            100
+                         004E-0FFF            100
 
                                   Symbol Table
 
@@ -211,7 +211,7 @@ __S0                     (abs)        2009
 __S1                     (abs)        0074
 __S3                     (abs)        0000
 ___latbits               (abs)        0001
-__end_of_ISR             text1        0047
+__end_of_ISR             text1        004E
 __end_of__initialization cinit        0013
 __end_of_main            maintext     0033
 __initialization         cinit        0013
@@ -243,7 +243,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 40 in file "main.c"
+		line 46 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -309,8 +309,8 @@ shared
 shared estimated size: 0
 
 main.c
-		_ISR           		CODE           	0033	0000	20
+		_ISR           		CODE           	0033	0000	27
 		_main          		CODE           	0016	0000	29
 
-main.c estimated size: 49
+main.c estimated size: 56
 

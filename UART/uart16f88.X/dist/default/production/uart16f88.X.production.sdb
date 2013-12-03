@@ -102,13 +102,13 @@
 [v ___tmul __tmul `(um  1 e 3 0 ]
 "3 /home/frico/microchip/xc8/v1.21/sources/pic/wmul.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
-"22 /home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c
+"22 /home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c
 [v _ISR ISR `II(v  1 e 0 0 ]
-"40
+"46
 [v _main main `(v  1 e 0 0 ]
 "296 /home/frico/microchip/xc8/v1.21/include/pic16f88.h
 [v _INTCON INTCON `VEuc  1 e 1 @11 ]
-[s S108 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S145 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -118,13 +118,13 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "319
-[s S117 . 1 `uc 1 . 1 0 :1:0 
+[s S154 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 INTE 1 0 :1:4 
 ]
-[u S122 . 1 `S108 1 . 1 0 `S117 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES122  1 e 1 @11 ]
+[u S159 . 1 `S145 1 . 1 0 `S154 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES159  1 e 1 @11 ]
 [s S19 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -136,33 +136,33 @@
 "389
 [u S27 . 1 `S19 1 . 1 0 ]
 [v _PIR1bits PIR1bits `VES27  1 e 1 @12 ]
-[s S181 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S218 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "652
-[s S187 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S224 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S192 . 1 `S181 1 . 1 0 `S187 1 . 1 0 ]
-[v _SSPCONbits SSPCONbits `VES192  1 e 1 @20 ]
-[s S159 . 1 `uc 1 CCP1M 1 0 :4:0 
+[u S229 . 1 `S218 1 . 1 0 `S224 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES229  1 e 1 @20 ]
+[s S196 . 1 `uc 1 CCP1M 1 0 :4:0 
 `uc 1 CCP1Y 1 0 :1:4 
 `uc 1 CCP1X 1 0 :1:5 
 ]
 "737
-[s S163 . 1 `uc 1 CCP1M0 1 0 :1:0 
+[s S200 . 1 `uc 1 CCP1M0 1 0 :1:0 
 `uc 1 CCP1M1 1 0 :1:1 
 `uc 1 CCP1M2 1 0 :1:2 
 `uc 1 CCP1M3 1 0 :1:3 
 ]
-[u S168 . 1 `S159 1 . 1 0 `S163 1 . 1 0 ]
-[v _CCP1CONbits CCP1CONbits `VES168  1 e 1 @23 ]
-[s S41 . 1 `uc 1 RX9D 1 0 :1:0 
+[u S205 . 1 `S196 1 . 1 0 `S200 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES205  1 e 1 @23 ]
+[s S78 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -172,23 +172,23 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "806
-[s S50 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S87 . 1 `uc 1 RCD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S54 . 1 `uc 1 . 1 0 :6:0 
+[s S91 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 nRC8 1 0 :1:6 
 ]
-[s S57 . 1 `uc 1 . 1 0 :6:0 
+[s S94 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[u S60 . 1 `S41 1 . 1 0 `S50 1 . 1 0 `S54 1 . 1 0 `S57 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES60  1 e 1 @24 ]
+[u S97 . 1 `S78 1 . 1 0 `S87 1 . 1 0 `S91 1 . 1 0 `S94 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES97  1 e 1 @24 ]
 "870
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "876
 [v _RCREG RCREG `VEuc  1 e 1 @26 ]
-[s S86 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S123 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -198,13 +198,13 @@
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "1069
-[u S95 . 1 `S86 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES95  1 e 1 @133 ]
+[u S132 . 1 `S123 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES132  1 e 1 @133 ]
 "1190
 [v _PIE1bits PIE1bits `VES27  1 e 1 @140 ]
 "1295
 [v _OSCCON OSCCON `VEuc  1 e 1 @143 ]
-[s S208 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S39 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -214,15 +214,15 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "1628
-[s S217 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S48 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 nTX8 1 0 :1:6 
 ]
-[s S221 . 1 `uc 1 . 1 0 :6:0 
+[s S52 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[u S224 . 1 `S208 1 . 1 0 `S217 1 . 1 0 `S221 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES224  1 e 1 @152 ]
+[u S55 . 1 `S39 1 . 1 0 `S48 1 . 1 0 `S52 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES55  1 e 1 @152 ]
 "1682
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "1986
@@ -245,13 +245,13 @@
 [v _WR WR `VEb  1 e 0 @3169 ]
 "2460
 [v _WREN WREN `VEb  1 e 0 @3170 ]
-"40 /home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c
+"46 /home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c
 [v _main main `(v  1 e 0 0 ]
 {
-"85
+"91
 } 0
 "22
 [v _ISR ISR `II(v  1 e 0 0 ]
 {
-"39
+"45
 } 0

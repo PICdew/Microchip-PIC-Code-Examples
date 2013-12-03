@@ -11,14 +11,14 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/cgtjF4rN0.obj
+$/tmp/cgtj3nVHv.obj
 end_init CODE 0 11 11 2 2
 reset_vec CODE 0 0 0 2 2
 config CONFIG 0 2007 2007 2 2
 $dist/default/production/uart16f88.X.production.obj
 cinit CODE 0 13 13 3 2
 intentry CODE 0 4 4 D 2
-text1 CODE 0 33 33 14 2
+text1 CODE 0 33 33 1B 2
 maintext CODE 0 16 16 1D 2
 cstackCOMMON COMMON 1 70 70 4 1
 # %UNUSED Section
@@ -32,13 +32,13 @@ BANK1 00A0-00EF 1
 BANK2 0110-016F 1
 BANK3 0190-01EF 1
 CODE 0002-0003 2
-CODE 0047-0FFF 2
+CODE 004E-0FFF 2
 COMMON 0074-007D 1
 CONST 0002-0003 2
-CONST 0047-0FFF 2
+CONST 004E-0FFF 2
 EEDATA 2100-21FF 2
 ENTRY 0002-0003 2
-ENTRY 0047-0FFF 2
+ENTRY 004E-0FFF 2
 IDLOC 2000-2003 2
 RAM 0020-006F 1
 RAM 00A0-00EF 1
@@ -49,9 +49,9 @@ SFR1 0080-009F 1
 SFR2 0100-010F 1
 SFR3 0180-018F 1
 STRCODE 0002-0003 2
-STRCODE 0047-0FFF 2
+STRCODE 004E-0FFF 2
 STRING 0002-0003 2
-STRING 0047-0FFF 2
+STRING 004E-0FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -66,34 +66,37 @@ STRING 0047-0FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/uart16f88.X.production.obj
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":22 4 intentry CODE
-"/tmp/cgtu7lf7K":222 13 cinit CODE
-"/tmp/cgtu7lf7K":223 14 cinit CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":43 16 maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":44 1A maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":48 1B maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":49 1C maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":50 1D maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":51 1E maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":54 1F maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":55 23 maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":58 24 maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":61 25 maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":64 29 maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":65 2A maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":66 2B maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":67 2C maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":70 2D maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":71 30 maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":72 31 maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":79 32 maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":25 33 text1 CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":85 33 maintext CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":27 35 text1 CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":28 37 text1 CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":32 3A text1 CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":33 3B text1 CODE
-"/home/frico/MPLABXProjects/Examples/UART/uart16f88.X/main.c":39 3C text1 CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":22 4 intentry CODE
+"/tmp/cgth52mIl":222 13 cinit CODE
+"/tmp/cgth52mIl":223 14 cinit CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":49 16 maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":50 1A maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":54 1B maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":55 1C maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":56 1D maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":57 1E maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":60 1F maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":61 23 maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":64 24 maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":67 25 maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":70 29 maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":71 2A maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":72 2B maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":73 2C maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":76 2D maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":77 30 maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":78 31 maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":85 32 maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":25 33 text1 CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":91 33 maintext CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":27 35 text1 CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":29 36 text1 CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":32 38 text1 CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":33 3C text1 CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":34 40 text1 CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":38 41 text1 CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":39 42 text1 CODE
+"/home/frico/Engenhocas/MPLABXProjects/Examples/UART/uart16f88.X/main.c":45 43 text1 CODE
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -118,10 +121,10 @@ __pintentry 8 0 CODE 0 intentry dist/default/production/uart16f88.X.production.o
 _OERR C1 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
 _main 2C 0 CODE 0 maintext dist/default/production/uart16f88.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
-start 22 0 CODE 0 init /tmp/cgtjF4rN0.obj
+start 22 0 CODE 0 init /tmp/cgtj3nVHv.obj
 _RCREG 1A 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
 _TXREG 19 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
-reset_vec 0 0 CODE 0 reset_vec /tmp/cgtjF4rN0.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/cgtj3nVHv.obj
 _SPBRG 99 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
 interrupt_function 8 0 CODE 0 intentry dist/default/production/uart16f88.X.production.obj
@@ -129,7 +132,7 @@ __Hconfig 4012 0 CONFIG 0 config -
 __Lconfig 400E 0 CONFIG 0 config -
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-__end_of_ISR 8E 0 CODE 0 text1 dist/default/production/uart16f88.X.production.obj
+__end_of_ISR 9C 0 CODE 0 text1 dist/default/production/uart16f88.X.production.obj
 __Hfunctab 0 0 CODE 0 functab -
 __Lfunctab 0 0 CODE 0 functab -
 __Hcommon 0 0 ABS 0 common -
@@ -173,7 +176,7 @@ __Hbank2 0 0 ABS 0 bank2 -
 __Lbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
 __Lbank3 0 0 ABS 0 bank3 -
-___latbits 1 0 ABS 0 - /tmp/cgtjF4rN0.obj
+___latbits 1 0 ABS 0 - /tmp/cgtj3nVHv.obj
 __Hpowerup 0 0 CODE 0 powerup -
 __Lpowerup 0 0 CODE 0 powerup -
 __ptext0 0 0 CODE 0 text0 dist/default/production/uart16f88.X.production.obj
@@ -195,13 +198,13 @@ __Hend_init 26 0 CODE 0 end_init -
 __Lend_init 22 0 CODE 0 end_init -
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-intlevel0 0 0 CODE 0 functab /tmp/cgtjF4rN0.obj
+intlevel0 0 0 CODE 0 functab /tmp/cgtj3nVHv.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
-intlevel1 0 0 CODE 0 functab /tmp/cgtjF4rN0.obj
-intlevel2 0 0 CODE 0 functab /tmp/cgtjF4rN0.obj
-intlevel3 0 0 CODE 0 functab /tmp/cgtjF4rN0.obj
-intlevel4 0 0 CODE 0 functab /tmp/cgtjF4rN0.obj
-intlevel5 0 0 CODE 0 functab /tmp/cgtjF4rN0.obj
+intlevel1 0 0 CODE 0 functab /tmp/cgtj3nVHv.obj
+intlevel2 0 0 CODE 0 functab /tmp/cgtj3nVHv.obj
+intlevel3 0 0 CODE 0 functab /tmp/cgtj3nVHv.obj
+intlevel4 0 0 CODE 0 functab /tmp/cgtj3nVHv.obj
+intlevel5 0 0 CODE 0 functab /tmp/cgtj3nVHv.obj
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production/uart16f88.X.production.obj
@@ -235,6 +238,6 @@ __CFG_CCPMX$RB0 0 0 ABS 0 - dist/default/production/uart16f88.X.production.obj
 # All other numeric quantities are in decimal.
 %SEGMENTS
 reset_vec 0 0 0 2 2 CODE
-intentry 0 4 8 43 2 CODE
+intentry 0 4 8 4A 2 CODE
 config 0 2007 400E 2 2 CONFIG
 cstackCOMMON 1 70 70 4 1 COMMON
